@@ -1,0 +1,26 @@
+#file: noinspection ComposeUnknownKeys
+version: '2'
+
+services:
+  #  app:
+  #    image: 'chatroom-app:latest'
+  #    build:
+  #      context: .
+  #    container_name: app
+  #    depends_on:
+  #      - db
+  #    environment:
+  #      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/chatroom
+  #      - SPRING_DATASOURCE_USERNAME=mohammad
+  #      - SPRING_DATASOURCE_PASSWORD=1580011
+  #      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: mohi
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: chatapp
+    ports:
+      - "5432:5432"
